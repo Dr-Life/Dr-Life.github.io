@@ -63,62 +63,23 @@
 <details>
     <summary>展开</summary>
 
-### 推导式：
-
-##### 列表推导式：
-
-[]  在第一句话写要返回数组中的元素。后面的句子写元素的筛选要求
-
-()  同样的操作形式，但返回的是一个generator。
-
-##### 字典推导式：
-
-#####                  {}  第一句话 “键：值”形式来规定返回键值对。后面的句子写筛选要求。
-
-##### 集合推导式：
-
-{}  第一句话写要返回集合中的元素。后面写筛选标准。
-
-### Iterator：
-
-list属于一种iterable，将一个可迭代对象作为参数传给iter()便生成了一个迭代器iterator
-
-next(iterator) 返回i迭代器中得下一个元素，iterator.______iner__()返回迭代器自身。
-
-### python高阶函数：
-
-附上官方网站[内置函数](https://docs.python.org/zh-cn/3/library/functions.html)
-
-高阶函数：一个函数可以作为参数传给另外一个函数，或者一个函数的返回值为另外一个函数（若返回值为该函数本身，则为递归），满足其一则为高阶函数。
-
-python的内置函数中的高阶函数：
-
-1、map(fuc,iter1.......)：对构造器中的元素进行fuc处理之后，再添加到一个构造器中并返回这个构造器。传函数参数的时候不要加括号。可以传多个构造器或者列表，但当元素数量最少的处理完之后就会退出。
-
-2、filter(func,iter1):fuc的返回值应该为boolean类型，筛选出iter1中为true的值返回到构造器中。
-
-也可以自己写高阶函数。
-
-### 数据库：
-
-#### matplotlib：
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pylab <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> matplotlib.oyplot <span class="keyword">import</span> MultipleLocator   <span class="comment">#引入设置坐标轴间距的包</span></span><br><span class="line"></span><br><span class="line">values=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">squares=[<span class="number">1</span>,<span class="number">4</span>,<span class="number">9</span>,<span class="number">16</span>,<span class="number">25</span>]</span><br><span class="line">plt.plot(values,squares,linewidth=<span class="number">1</span>)                          <span class="comment">#用plt.plot()绘制曲线</span></span><br><span class="line">plt.xlim((<span class="number">0</span>,<span class="number">6</span>))                                                                         <span class="comment">#设置x轴的显示范围</span></span><br><span class="line">plt.title(<span class="string">"Square Numbers"</span>,fontsize=<span class="number">24</span>)                  <span class="comment">#为图表添加标题并设置字体大小</span></span><br><span class="line">plt.xlabel(<span class="string">"Value"</span>,fontsize=<span class="number">14</span>)                                    <span class="comment">#为x轴添加标签并设置字体大小</span></span><br><span class="line">plt.ylabel(<span class="string">"Square of Values"</span>,fontsize=<span class="number">14</span>)             <span class="comment">#为y轴添加标签并设置字体大小</span></span><br><span class="line">plt.yticks([<span class="number">0</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">9</span>,<span class="number">16</span>,<span class="number">25</span>],</span><br><span class="line">     [<span class="string">"level1"</span>,<span class="string">"level2"</span>,<span class="string">"level3"</span>,<span class="string">"level4"</span>,<span class="string">"level5"</span>,<span class="string">"level6"</span>],fontsize=<span class="number">8</span>)    </span><br><span class="line">                                                                                                   <span class="comment">#把y轴上对应点设置成字符串并设置大小</span></span><br><span class="line">plt.gca().xaxis.set_major_locator(MultipleLocator(<span class="number">2</span>))              <span class="comment">#将x轴的间距设置为2</span></span><br><span class="line">plt.scatter(values,squares)                                             <span class="comment">#可用来绘制点</span></span><br><span class="line">plt.show()                                                                               <span class="comment">#显示图像</span></span><br></pre></td></tr></table></figure>
+<h3 id="推导式："><a href="#推导式：" class="headerlink" title="推导式："></a>推导式：</h3><h5 id="列表推导式："><a href="#列表推导式：" class="headerlink" title="列表推导式："></a>列表推导式：</h5><p>[]  在第一句话写要返回数组中的元素。后面的句子写元素的筛选要求</p>
+<p>()  同样的操作形式，但返回的是一个generator。</p>
+<h5 id="字典推导式："><a href="#字典推导式：" class="headerlink" title="字典推导式："></a>字典推导式：</h5><h5 id="第一句话-“键：值”形式来规定返回键值对。后面的句子写筛选要求。"><a href="#第一句话-“键：值”形式来规定返回键值对。后面的句子写筛选要求。" class="headerlink" title="{}  第一句话 “键：值”形式来规定返回键值对。后面的句子写筛选要求。"></a>{}  第一句话 “键：值”形式来规定返回键值对。后面的句子写筛选要求。</h5><h5 id="集合推导式："><a href="#集合推导式：" class="headerlink" title="集合推导式："></a>集合推导式：</h5><p>{}  第一句话写要返回集合中的元素。后面写筛选标准。</p>
+<h3 id="Iterator："><a href="#Iterator：" class="headerlink" title="Iterator："></a>Iterator：</h3><p>list属于一种iterable，将一个可迭代对象作为参数传给iter()便生成了一个迭代器iterator</p>
+<p>next(iterator) 返回i迭代器中得下一个元素，iterator.<strong>__</strong>iner__()返回迭代器自身。</p>
+<h3 id="python高阶函数："><a href="#python高阶函数：" class="headerlink" title="python高阶函数："></a>python高阶函数：</h3><p>附上官方网站<a href="https://docs.python.org/zh-cn/3/library/functions.html" target="_blank" rel="noopener">内置函数</a></p>
+<p>高阶函数：一个函数可以作为参数传给另外一个函数，或者一个函数的返回值为另外一个函数（若返回值为该函数本身，则为递归），满足其一则为高阶函数。</p>
+<p>python的内置函数中的高阶函数：</p>
+<p>1、map(fuc,iter1…….)：对构造器中的元素进行fuc处理之后，再添加到一个构造器中并返回这个构造器。传函数参数的时候不要加括号。可以传多个构造器或者列表，但当元素数量最少的处理完之后就会退出。</p>
+<p>2、filter(func,iter1):fuc的返回值应该为boolean类型，筛选出iter1中为true的值返回到构造器中。</p>
+<p>也可以自己写高阶函数。</p>
+<h3 id="数据库："><a href="#数据库：" class="headerlink" title="数据库："></a>数据库：</h3><h4 id="matplotlib："><a href="#matplotlib：" class="headerlink" title="matplotlib："></a>matplotlib：</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pylab <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> matplotlib.oyplot <span class="keyword">import</span> MultipleLocator   <span class="comment">#引入设置坐标轴间距的包</span></span><br><span class="line"></span><br><span class="line">values=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">squares=[<span class="number">1</span>,<span class="number">4</span>,<span class="number">9</span>,<span class="number">16</span>,<span class="number">25</span>]</span><br><span class="line">plt.plot(values,squares,linewidth=<span class="number">1</span>)                          <span class="comment">#用plt.plot()绘制曲线</span></span><br><span class="line">plt.xlim((<span class="number">0</span>,<span class="number">6</span>))                                                                         <span class="comment">#设置x轴的显示范围</span></span><br><span class="line">plt.title(<span class="string">"Square Numbers"</span>,fontsize=<span class="number">24</span>)                  <span class="comment">#为图表添加标题并设置字体大小</span></span><br><span class="line">plt.xlabel(<span class="string">"Value"</span>,fontsize=<span class="number">14</span>)                                    <span class="comment">#为x轴添加标签并设置字体大小</span></span><br><span class="line">plt.ylabel(<span class="string">"Square of Values"</span>,fontsize=<span class="number">14</span>)             <span class="comment">#为y轴添加标签并设置字体大小</span></span><br><span class="line">plt.yticks([<span class="number">0</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">9</span>,<span class="number">16</span>,<span class="number">25</span>],</span><br><span class="line">     [<span class="string">"level1"</span>,<span class="string">"level2"</span>,<span class="string">"level3"</span>,<span class="string">"level4"</span>,<span class="string">"level5"</span>,<span class="string">"level6"</span>],fontsize=<span class="number">8</span>)    </span><br><span class="line">                                                                                                   <span class="comment">#把y轴上对应点设置成字符串并设置大小</span></span><br><span class="line">plt.gca().xaxis.set_major_locator(MultipleLocator(<span class="number">2</span>))              <span class="comment">#将x轴的间距设置为2</span></span><br><span class="line">plt.scatter(values,squares)                                             <span class="comment">#可用来绘制点</span></span><br><span class="line">plt.show()                                                                               <span class="comment">#显示图像</span></span><br></pre></td></tr></table></figure>
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pylab <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">values=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">squares=[<span class="number">1</span>,<span class="number">4</span>,<span class="number">9</span>,<span class="number">16</span>,<span class="number">25</span>]</span><br><span class="line">plt.scatter(values,squares,c=<span class="string">'red'</span>,edgecolor=<span class="string">"none"</span>)                                             </span><br><span class="line">					        <span class="comment">#可用来绘制点,可以使用列表推导式，c=''来设置颜色，edgecolor=''来设置轮廓颜色。</span></span><br><span class="line">plt.scatter(values,squares,c=squares,cmap=plt.cm.Blues,s=<span class="number">20</span>)</span><br><span class="line">                            <span class="comment">#可以将颜色设置为y的值，然后加上cmap.... ，这样可以设置为一种颜色的渐变</span></span><br><span class="line">                            <span class="comment">#否则是RGB？ 反正五颜六色</span></span><br><span class="line">plt.xlim((<span class="number">0</span>,<span class="number">6</span>))                                                                        <span class="comment">#设置x轴的显示范围</span></span><br><span class="line">plt.title(<span class="string">"Square Numbers"</span>,fontsize=<span class="number">24</span>)                  <span class="comment">#为图表添加标题并设置字体大小</span></span><br><span class="line">plt.xlabel(<span class="string">"Value"</span>,fontsize=<span class="number">14</span>)                                     <span class="comment">#为x轴添加标签并设置字体大小</span></span><br><span class="line">plt.ylabel(<span class="string">"Square of Values"</span>,fontsize=<span class="number">14</span>)              <span class="comment">#为y轴添加标签并设置字体大小</span></span><br><span class="line"></span><br><span class="line">plt.gca().xaxis.set_major_locator(MultipleLocator(<span class="number">2</span>))              <span class="comment">#将x轴的间距设置为2</span></span><br><span class="line">plt.show()                                                                               <span class="comment">#显示图像</span></span><br></pre></td></tr></table></figure>
 
-随机漫步图
-
-
-
-
-
-
-
-### 机器学习：
-
-只是学习了一些基础知识，检验方法和公式。
-
+<p>随机漫步图</p>
+<h3 id="机器学习："><a href="#机器学习：" class="headerlink" title="机器学习："></a>机器学习：</h3><p>只是学习了一些基础知识，检验方法和公式。</p>
 </details>
       </div>
     </div>
